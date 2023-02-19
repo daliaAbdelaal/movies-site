@@ -1,0 +1,44 @@
+<input type="text" [(ngModel)]='term' placeholder="search ...." class=" text-white form-control bg-transparent w-50 m-auto py-3" >
+<div class="row pt-5 movies">
+        <div class="col-md-4">
+                <div class="info mt-4">
+                        <h2 class="mb-3">
+                              Trending <br>
+                              movies<br>
+                              to watch now  
+                        </h2>
+                        <span class="watched">Most watched movies by days</span>
+                        
+                </div>
+        </div>
+        <div *ngFor=" let movie of trendingMovies|search:term" class="col-md-2 mb-5 text-center">
+                <div>
+                        <img class=" img-fluid" src='https://image.tmdb.org/t/p/original/{{movie.poster_path}}' alt="">
+                        <span class="vote">{{movie.vote_average}}</span>
+                        <h5 class="mt-3">{{movie.title}}</h5>
+                        <button routerLink='/details/{{movie.media_type}}/{{movie.id}}' class="btn btn-info py-2">Details</button>
+                </div>
+        </div>
+</div>
+
+<div class="row pt-5 tvshows">
+        <div class="col-md-4">
+                <div class="info mt-5">
+                        <h2 class="mb-3">
+                              Trending <br>
+                              tv<br>
+                              to watch now  
+                        </h2>
+                        <span class="watched">Most watched tvshows by days</span>
+                        
+                </div>
+        </div>
+        <div *ngFor='let tv of trendingTvshows|search:term' class="col-md-2 mb-5 text-center">
+                <div>
+                        <img class=" img-fluid" src='https://image.tmdb.org/t/p/original/{{tv.poster_path}}' alt="">
+                        <span class="vote">{{tv.vote_average}}</span>
+                        <h5 class="mt-3">{{tv.title}}</h5>
+                        <button routerLink='/details/{{tv.media_type}}/{{tv.id}}' class="btn btn-info py-2">Details</button>
+                </div>
+        </div>
+</div>

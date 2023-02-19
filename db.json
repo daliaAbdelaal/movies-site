@@ -1,0 +1,33 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "signUpUsers": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "first_name": "Dalia",
+      "last_name": "Abdelaal",
+      "email": "d@g",
+      "password": "D123",
+      "id": 2
+    },
+    {
+      "first_name": "marwa",
+      "last_name": "abdelaal",
+      "email": "marwa@gmail.com",
+      "password": "M123",
+      "id": 3
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

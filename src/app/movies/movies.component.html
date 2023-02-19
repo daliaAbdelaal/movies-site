@@ -1,0 +1,22 @@
+<div class="row pt-5 movies">
+        <div class="col-md-4">
+                <div class="info mt-4">
+                        <h2 class="mb-3">
+                              Trending <br>
+                              movies<br>
+                              to watch now  
+                        </h2>
+                        <span class="watched">Most watched movies by days</span>
+                        
+                </div>
+        </div>
+        <div *ngFor='let movie of trendingMovies' class="col-md-2 mb-5">
+                <div>
+                        <img class=" img-fluid" src='https://image.tmdb.org/t/p/original/{{movie.poster_path}}' alt="">
+                        <span class="vote">{{movie.vote_average}}</span>
+                        <h5 class="mt-3">{{movie.title}}</h5>
+                        <button routerLink='/details/{{movie.media_type}}/{{movie.id}}' class="btn btn-info py-2">Details</button>
+
+                </div>
+        </div>
+</div>

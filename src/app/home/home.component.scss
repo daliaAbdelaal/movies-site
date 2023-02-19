@@ -1,0 +1,50 @@
+@import '../../styles.scss';
+.row
+{
+        .info
+        {
+                position: relative;
+        }
+        .info::before
+        {
+                content: "";
+                position: absolute;
+                background-color: $borderColor;
+                width: 25%;
+                height: 2px;
+                top: -10%;
+        }
+        .info::after
+        {
+                content: "";
+                position: absolute;
+                background-color: $borderColor;
+                width: 90%;
+                height: 2px;
+                bottom: -10%;
+                left: 0;
+        }
+        .watched
+        {
+                font-size: 14px;
+                color: $secondFontColor;
+        }
+        h5
+        {
+                font-size: 14px;
+               
+                line-height: 1.5;
+        }
+        img
+        {
+                position: relative;
+        }
+        .vote
+        {
+                position: absolute;
+                top: 0px;
+                right: 20px;
+                padding: 5px;
+                background-color: $lightBgColor;
+        }
+}

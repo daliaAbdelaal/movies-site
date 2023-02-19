@@ -1,0 +1,23 @@
+<div class="row pt-3">
+    <div class="col-md-4">
+        <div class="">
+            <img [src]="imgPath+itemDetails.poster_path" class="img-fluid">
+        </div>
+    </div>
+    <div class="col-md-8 pt-4">
+        <div class="">
+            <h2 class="h3">{{itemDetails.title}}{{itemDetails.name}}</h2>
+            <h3 class="h5 py-3">{{itemDetails.tagline}}</h3>
+            <button class="btn btn-info mr-3" *ngFor="let gen of itemDetails.genres">{{gen.name}}</button>
+            <div class="py-4">
+                <span class=" d-block pb-3">vote : {{itemDetails.vote_average}}</span>
+                <span class=" d-block pb-3">vote Count : {{itemDetails.vote_count}}</span>
+                <span class=" d-block pb-3">popularity : {{itemDetails.popularity}}</span>
+                <span class=" d-block ">release_date : {{itemDetails.release_date}}{{itemDetails.first_air_date}}</span>
+            </div>
+            <p>
+                {{itemDetails.overview}}
+            </p>
+        </div>
+    </div>
+</div>
